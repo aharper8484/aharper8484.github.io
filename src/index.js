@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
-import Post from "./Post";
+import App from "./components/App";
+import Post from "./components/Post";
 import reportWebVitals from "./reportWebVitals";
 // import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
