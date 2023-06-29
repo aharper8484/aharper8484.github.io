@@ -1,19 +1,14 @@
-import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-import remarkGfm from "remark-gfm";
 import "./App.css";
+import data from "../assets/testdata.json";
 
-const postContent = `
-# Blog - First Post
-This is an example of my first ever blog \n\n post to appear in my React based blog
-
-## This is a H2
-
-And
-
-### H3 header is here`;
+const words = data.postContent;
 
 function Post() {
-  return <ReactMarkdown children={postContent} remarkPlugins={[remarkGfm]} />;
+  return (
+    <div>
+      <p>{words}</p>
+    </div>
+  );
 }
 
 export default Post;
