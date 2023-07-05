@@ -1,0 +1,5 @@
+function Bio(props){
+    return(){
+        
+    }
+}

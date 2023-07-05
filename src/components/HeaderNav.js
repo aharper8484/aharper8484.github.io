@@ -3,7 +3,7 @@ import "./HeaderNav.css";
 function HeaderNav() {
   return (
     <div className="navbar">
-      <h1>NAVBAR goes here</h1>
+      <h1>Adam Harper</h1>
     </div>
   );
 }
