@@ -2,8 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import HeaderNav from "./components/HeaderNav";
-import App from "./components/App";
-import Post from "./components/Post";
+import MainBody from "./components/MainBody";
 import reportWebVitals from "./reportWebVitals";
 // import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
@@ -11,8 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <HeaderNav />
-    <App />
-    <Post />
+    <MainBody />
     <HeaderNav />
   </React.StrictMode>
 );

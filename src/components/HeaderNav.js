@@ -1,8 +1,8 @@
-import "./App.css";
+import "./HeaderNav.css";
 
 function HeaderNav() {
   return (
-    <div>
+    <div className="navbar">
       <h1>NAVBAR goes here</h1>
     </div>
   );
