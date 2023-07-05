@@ -15,14 +15,25 @@
 }
 
 .itemContainer {
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: bisque;
+  background-color: purple;
+  color: aliceblue;
+  border: 8px solid black;
   border-radius: 25px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.cardTitle:hover {
+  transform: scale(105%);
+  transition: 1.5s;
+  opacity: 0.7;
 }
 
 @media (min-width: 320px) {
