@@ -1,5 +1,65 @@
-.mainBodyGrid {
+.mainContainer {
   border: 1px solid blue;
+  display: grid;
+  place-items: center;
+}
+
+.mainGrid {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  /* align-items: center;
+  justify-content: center; */
+  gap: 20px;
+  padding: 20px;
+}
+
+.itemContainer {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: bisque;
+  border-radius: 25px;
+}
+
+@media (min-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+  .mainGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .mainGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .mainGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .mainGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .mainGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+  .mainGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 h1 {
