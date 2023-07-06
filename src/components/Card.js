@@ -2,10 +2,13 @@ import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { useState } from "react";
 
 function Card(props) {
+  const titleCardClass = " cardTitle";
+  const textCardClass = " cardText";
   const titleContent = `# ` + props.title;
   const textContent = `markdown content will go here`;
   const [mdContent, setMdContent] = useState(titleContent);
   const [toggle, setToggle] = useState(false);
+  const [currentClass, setClass] = useState(titleCardClass);
 
   //   const handleClick = (e) => {
   //     e.preventDefault();
@@ -14,20 +17,23 @@ function Card(props) {
   //   };
 
   // TODO - fix toggle
-  const displayContent = () => {
+  function displayContent() {
     if (toggle === false) {
       setMdContent(textContent);
+
       setToggle(!toggle);
+      setClass(textCardClass);
     } else {
       setMdContent(titleContent);
-      setToggle(toggle);
+      setToggle(!toggle);
+      setClass(titleCardClass);
     }
-  };
+  }
 
   if (props.contentType === "text") {
     return (
       <div
-        className="textCardContainer cardTitle cardHidden"
+        className={"textCardContainer cardTitle" + currentClass}
         onClick={() => displayContent()}
       >
         {
