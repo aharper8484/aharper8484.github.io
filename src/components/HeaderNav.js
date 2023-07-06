@@ -1,9 +1,9 @@
 import "./HeaderNav.css";
 
-function HeaderNav() {
+function HeaderNav(props) {
   return (
     <div className="navbar">
-      <h1>Adam Harper</h1>
+      <img src={props.logo} alt="" className="navLogo"></img>
     </div>
   );
 }

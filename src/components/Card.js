@@ -13,11 +13,13 @@ function Card(props) {
   //     displayContent();
   //   };
 
-  const displayContent = (toggle) => {
+  const displayContent = () => {
     if (toggle === false) {
-      setMdContent(titleContent);
-    } else {
       setMdContent(textContent);
+      setToggle(!toggle);
+    } else {
+      setMdContent(titleContent);
+      setToggle(toggle);
     }
   };
 
@@ -25,7 +27,7 @@ function Card(props) {
     return (
       <div
         className="textCardContainer cardTitle cardHidden"
-        onClick={() => setToggle(!toggle)}
+        onClick={() => displayContent()}
       >
         {
           // eslint-disable-next-line
@@ -37,6 +39,31 @@ function Card(props) {
     return (
       <div className="imageCardContainer">
         <img className="cardImage" src={props.image} alt="Profile" />
+      </div>
+    );
+  } else if (props.contentType === "linkage") {
+    return (
+      <div className="linkCardContainer">
+        <div className="linkCardGrid">
+          <div className="linkCardItem">
+            <img className="iconImage" src={props.githubIcon} alt=""></img>
+          </div>
+          <div className="linkCardItem">
+            <img className="iconImage" src={props.linkedinIcon} alt=""></img>
+          </div>
+          <div className="linkCardItem">
+            <img className="iconImage" src={props.resumeIcon} alt=""></img>
+          </div>
+          <div className="linkCardItem linkText">
+            <ReactMarkdown>**aharper8484@gmail.com**</ReactMarkdown>
+          </div>
+          <div className="linkCardItem linkText">
+            <ReactMarkdown>**07980686594**</ReactMarkdown>
+          </div>
+          <div className="linkCardItem linkText">
+            <ReactMarkdown>**Website Link**</ReactMarkdown>
+          </div>
+        </div>
       </div>
     );
   }
