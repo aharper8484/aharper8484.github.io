@@ -13,6 +13,7 @@ function Card(props) {
   //     displayContent();
   //   };
 
+  // TODO - fix toggle
   const displayContent = () => {
     if (toggle === false) {
       setMdContent(textContent);
