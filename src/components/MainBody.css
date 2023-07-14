@@ -30,7 +30,7 @@ secondary - murkyGreen 006600
   color: #800000;
   border: 8px solid #ff771b;
   border-radius: 25px;
-  transition: width 2s, height 2s, transform 1s;
+  transition: width 0.5s, height 1s, transform 0.5s;
   transform-style: preserve-3d;
   box-shadow: 5px 10px #e0dfdf;
   z-index: 1;
@@ -68,7 +68,7 @@ secondary - murkyGreen 006600
   height: fit-content;
   /* padding: 5%; */
   word-wrap: break-word;
-  transition: width 2s, height 2s, transform 1s;
+  transition: width 2s, height 3s, transform 2s;
   transform-style: flat;
   transition-property: width;
 }

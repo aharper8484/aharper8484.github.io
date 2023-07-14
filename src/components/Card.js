@@ -6,9 +6,19 @@ function Card(props) {
   const titleCardClass = " cardTitle";
   const textCardClass = " cardText";
   const titleContent = `# ` + props.title;
-  const textContentSkills = `Skills to be completed`;
+  const textContentSkills = `
+  # SKILLS
+  * HTML
+  * CSS (SaSS)
+  * JavaScript (ReactJS, NodeJS, Express)
+  * Wordpress (PHP, SQL)
+  `;
   const textContentTimeline = `Timeline to be completed`;
-  const textContentLinks = `Links to be completed`;
+  const textContentLinks = `
+  # LINKS
+  * Blog Site (TBC)
+  * InHealthcare
+  `;
   const textContentBio = `
   # BIO
 
