@@ -6,7 +6,10 @@ function Card(props) {
   const titleCardClass = " cardTitle";
   const textCardClass = " cardText";
   const titleContent = `# ` + props.title;
-  const textContent = `
+  const textContentSkills = `Skills to be completed`;
+  const textContentTimeline = `Timeline to be completed`;
+  const textContentLinks = `Links to be completed`;
+  const textContentBio = `
   # BIO
 
   A developer with a background in International Trade. I'm currently an Application Developer for InHealthcare and in my spare time I study JavaScript, specifically the MERN stack. When I’m not coding, I'm a keen writer, screenwriter, musician, and artist.
@@ -47,16 +50,28 @@ function Card(props) {
   //   };
 
   // TODO - fix toggle
-  function displayContent() {
-    if (toggle === false) {
-      setMdContent(textContent);
-
+  function displayContent(title) {
+    if (toggle === false && props.title === "Bio") {
       setToggle(!toggle);
       setClass(textCardClass);
+      setMdContent(textContentBio);
+    } else if (toggle === false && props.title === "Skills") {
+      setToggle(!toggle);
+      setClass(textCardClass);
+      setMdContent(textContentSkills);
+    } else if (toggle === false && props.title === "Timeline") {
+      setToggle(!toggle);
+      setClass(textCardClass);
+      setMdContent(textContentTimeline);
+    } else if (toggle === false && props.title === "Links") {
+      setToggle(!toggle);
+      setClass(textCardClass);
+      setMdContent(textContentLinks);
     } else {
       setMdContent(titleContent);
       setToggle(!toggle);
       setClass(titleCardClass);
+      console.log(mdContent);
     }
   }
 
@@ -64,7 +79,8 @@ function Card(props) {
     return (
       <div
         className={"textCardContainer " + currentClass}
-        onClick={() => displayContent()}
+        id={props.title}
+        onClick={() => displayContent(props.title)}
       >
         {
           // eslint-disable-next-line
