@@ -1,3 +1,9 @@
+/*
+main darkBurgundy - 800000
+secondary murkyOrange - 803a00
+secondary - murkyGreen 006600
+*/
+
 .mainContainer {
   display: grid;
   place-items: center;
@@ -11,7 +17,7 @@
   border: 1px solid blue;
   justify-items: center;
   justify-content: space-evenly;
-  gap: 20px;
+  row-gap: 20px;
 }
 
 .textCardContainer {
@@ -20,12 +26,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: purple;
-  color: aliceblue;
-  border: 8px solid black;
+  background-color: #ffac1b;
+  color: #800000;
+  border: 8px solid #ff771b;
   border-radius: 25px;
-  transition: transform 1s;
+  transition: width 2s, height 2s, transform 1s;
   transform-style: preserve-3d;
+  box-shadow: 5px 10px #e0dfdf;
+  z-index: 1;
 }
 
 .imageCardContainer {
@@ -34,30 +42,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: purple;
-  color: aliceblue;
-  border: 8px solid black;
+  background-color: #ffac1b;
+  color: #800000;
+  border: 8px solid #800000;
   border-radius: 25px;
-  transition: transform 1s;
-  transform-style: preserve-3d;
+  transition: transform 4s;
+  transform-style: flat;
 }
 
 .cardTitle:hover {
   transform: scale(105%);
-  transition: 1.5s;
+  transition: 2s;
   opacity: 0.7;
+  transition: all 3s ease-out;
 }
 
 .cardText.textCardContainer {
   display: block;
-  border: solid 5px orange;
+  background-color: #ffac1b;
+  color: #800000;
+  border: 8px solid #ff771b;
   font-size: smaller;
   text-align: left;
-  color: yellow;
   width: 720px;
   height: fit-content;
   padding: 5%;
   word-wrap: break-word;
+  transition: width 2s, height 2s, transform 1s;
+  transform-style: flat;
 }
 
 p.cardText::after {
@@ -80,12 +92,11 @@ p.cardText::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 20px; */
-  /* background-color: white; */
-  color: aliceblue;
-  border: 8px solid black;
+  background-color: white;
+  color: #800000;
+  border: 8px solid #800000;
   border-radius: 25px;
-  transition: transform 1s;
+  transition: transform 3s;
   transform-style: preserve-3d;
 }
 
@@ -113,7 +124,7 @@ p.cardText::after {
 }
 
 .linkCardItem.linkText {
-  color: black;
+  color: #800000;
   grid-column: 1 / 4;
   /* grid-row: 1 / 3; */
   /* border: 5px solid red; */
@@ -127,34 +138,29 @@ p.cardText::after {
 
 @media (min-width: 320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
+  .cardText.textCardContainer {
+    width: 220px;
+  }
 }
 @media (min-width: 481px) {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-  /* .mainGrid {
-    grid-template-columns: repeat(1, 1fr);
-  } */
+  .cardText.textCardContainer {
+    width: 360px;
+  }
 }
 @media (min-width: 641px) {
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-  /* .mainGrid {
-    grid-template-columns: repeat(2, 1fr);
-  } */
+  .cardText.textCardContainer {
+    width: 480px;
+  }
 }
 @media (min-width: 961px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
-  /* .mainGrid {
-    grid-template-columns: repeat(2, 1fr);
-  } */
 }
 @media (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
-  /* .mainGrid {
-    grid-template-columns: repeat(3, 1fr);
-  } */
 }
+
 @media (min-width: 1281px) {
   /* hi-res laptops and desktops */
-  /* .mainGrid {
-    grid-template-columns: repeat(3, 1fr);
-  } */
 }

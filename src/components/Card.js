@@ -1,7 +1,6 @@
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { useState } from "react";
 import remarkGfm from "remark-gfm";
-import Bio from "../pages/Bio";
 
 function Card(props) {
   const titleCardClass = " cardTitle";
@@ -36,6 +35,7 @@ function Card(props) {
   Technologies learned outside of InHealthcare:
   
   HTML, CSS (SaSS), JavaScript (Typescript, React, NodeJS, Express), Wordpress (PHP)`;
+
   const [mdContent, setMdContent] = useState(titleContent);
   const [toggle, setToggle] = useState(false);
   const [currentClass, setClass] = useState(titleCardClass);
