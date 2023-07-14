@@ -1,27 +1,25 @@
 .mainContainer {
-  border: 1px solid blue;
   display: grid;
   place-items: center;
+  border: 1px solid red;
 }
 
 .mainGrid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  border: 1px solid blue;
   justify-items: center;
-  grid-template-columns: repeat(3, 1fr);
-  /* align-items: center;
-  justify-content: center; */
+  justify-content: space-evenly;
   gap: 20px;
-  /* padding: 20px; */
 }
 
 .textCardContainer {
   width: 220px;
   height: 220px;
-  /* position: relative; */
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 20px; */
   background-color: purple;
   color: aliceblue;
   border: 8px solid black;
@@ -33,11 +31,9 @@
 .imageCardContainer {
   width: 220px;
   height: 220px;
-  /* position: relative; */
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 20px; */
   background-color: purple;
   color: aliceblue;
   border: 8px solid black;
@@ -53,15 +49,20 @@
 }
 
 .cardText.textCardContainer {
-  color: black;
-  width: 440px;
-  height: auto;
-  font-size: xx-small;
-  /* white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap; */
+  display: block;
+  border: solid 5px orange;
+  font-size: smaller;
+  text-align: left;
+  color: yellow;
+  width: 720px;
+  height: fit-content;
+  padding: 5%;
   word-wrap: break-word;
+}
+
+p.cardText::after {
+  content: "\a";
+  white-space: pre;
 }
 
 .imageCardContainer img.cardImage {
@@ -126,37 +127,34 @@
 
 @media (min-width: 320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
-  .mainGrid {
-    grid-template-columns: repeat(1, 1fr);
-  }
 }
 @media (min-width: 481px) {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-  .mainGrid {
+  /* .mainGrid {
     grid-template-columns: repeat(1, 1fr);
-  }
+  } */
 }
 @media (min-width: 641px) {
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-  .mainGrid {
+  /* .mainGrid {
     grid-template-columns: repeat(2, 1fr);
-  }
+  } */
 }
 @media (min-width: 961px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
-  .mainGrid {
+  /* .mainGrid {
     grid-template-columns: repeat(2, 1fr);
-  }
+  } */
 }
 @media (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
-  .mainGrid {
+  /* .mainGrid {
     grid-template-columns: repeat(3, 1fr);
-  }
+  } */
 }
 @media (min-width: 1281px) {
   /* hi-res laptops and desktops */
-  .mainGrid {
+  /* .mainGrid {
     grid-template-columns: repeat(3, 1fr);
-  }
+  } */
 }

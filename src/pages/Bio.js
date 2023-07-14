@@ -1,5 +1,6 @@
 function Bio(props) {
-  let tileContentText = `# Bio
+  let tileContentText = `
+        # BIO
 
         A developer with a background in International Trade. I'm currently an Application Developer for InHealthcare and in my spare time I study JavaScript, specifically the MERN stack. When I’m not coding, I'm a keen writer, screenwriter, musician, and artist.
         
