@@ -1,11 +1,12 @@
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { useState } from "react";
+import Bio from "../pages/Bio";
 
 function Card(props) {
   const titleCardClass = " cardTitle";
   const textCardClass = " cardText";
   const titleContent = `# ` + props.title;
-  const textContent = `markdown content will go here`;
+  const textContent = Bio();
   const [mdContent, setMdContent] = useState(titleContent);
   const [toggle, setToggle] = useState(false);
   const [currentClass, setClass] = useState(titleCardClass);
@@ -33,7 +34,7 @@ function Card(props) {
   if (props.contentType === "text") {
     return (
       <div
-        className={"textCardContainer cardTitle" + currentClass}
+        className={"textCardContainer " + currentClass}
         onClick={() => displayContent()}
       >
         {
