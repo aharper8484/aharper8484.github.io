@@ -5,7 +5,7 @@ import remarkGfm from "remark-gfm";
 function Card(props) {
   const titleCardClass = " cardTitle";
   const textCardClass = " cardText";
-  const mainContent = `# ` + props.title;
+  const mainContent = `# Landing Page Content to be built here!`;
   const textContentSkills = `
   # SKILLS
   * HTML
@@ -49,7 +49,7 @@ function Card(props) {
   
   HTML, CSS (SaSS), JavaScript (Typescript, React, NodeJS, Express), Wordpress (PHP)`;
 
-  const [mdContent, setMdContent] = useState(mainContent);
+  const [mdContent, setMdContent] = useState(props.contentType);
   const [toggle, setToggle] = useState(false);
   const [currentClass, setClass] = useState(titleCardClass);
 
@@ -61,19 +61,19 @@ function Card(props) {
 
   // TODO - fix toggle
   function displayContent(title) {
-    if (toggle === false && props.title === "Bio") {
+    if (toggle === false && props.contentType === 1) {
       setToggle(!toggle);
       setClass(textCardClass);
       setMdContent(textContentBio);
-    } else if (toggle === false && props.title === "Skills") {
+    } else if (toggle === false && props.contentType === 2) {
       setToggle(!toggle);
       setClass(textCardClass);
       setMdContent(textContentSkills);
-    } else if (toggle === false && props.title === "Timeline") {
+    } else if (toggle === false && props.contentType === 3) {
       setToggle(!toggle);
       setClass(textCardClass);
       setMdContent(textContentTimeline);
-    } else if (toggle === false && props.title === "Links") {
+    } else if (toggle === false && props.contentType === 4) {
       setToggle(!toggle);
       setClass(textCardClass);
       setMdContent(textContentLinks);
@@ -85,26 +85,18 @@ function Card(props) {
     }
   }
 
-  if (props.contentType === "text") {
-    return (
-      <div
-        className={"textCardContainer " + currentClass}
-        id={props.title}
-        onClick={() => displayContent(props.title)}
-      >
-        {
-          // eslint-disable-next-line
-        }
-        <ReactMarkdown children={mdContent} remarkPlugins={[remarkGfm]} />
-      </div>
-    );
-  } else if (props.contentType === "image") {
-    return (
-      <div className="imageCardContainer">
-        <img className="cardImage" src={props.image} alt="Profile" />
-      </div>
-    );
-  }
+  return (
+    <div
+      className={"textCardContainer " + currentClass}
+      id={props.title}
+      onClick={() => displayContent(props.setActiveIndex)}
+    >
+      {
+        // eslint-disable-next-line
+      }
+      <ReactMarkdown children={mdContent} remarkPlugins={[remarkGfm]} />
+    </div>
+  );
 }
 
 export default Card;

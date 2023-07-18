@@ -3,14 +3,30 @@ import "./MainNav.css";
 import "./CardToggle";
 import CardNav from "./CardNav";
 
-function MainNav() {
+function MainNav(props) {
   return (
     <div className="mainNavContainer">
       <div className="mainNavGrid">
-        <CardNav title="Bio" className="mainNavRowIcon" />
-        <CardNav title="Skills" className="mainNavRowIcon" />
-        <CardNav title="Timeline" className="mainNavRowIcon" />
-        <CardNav title="Links" className="mainNavRowIcon" />
+        <CardNav
+          title="Bio"
+          className="mainNavRowIcon"
+          onClick={() => props.setActiveIndex(1)}
+        />
+        <CardNav
+          title="Skills"
+          className="mainNavRowIcon"
+          onClick={() => props.setActiveIndex(2)}
+        />
+        <CardNav
+          title="Timeline"
+          className="mainNavRowIcon"
+          onClick={() => props.setActiveIndex(3)}
+        />
+        <CardNav
+          title="Links"
+          className="mainNavRowIcon"
+          onClick={() => props.setActiveIndex(4)}
+        />
       </div>
     </div>
   );

@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import HeaderNav from "./components/HeaderNav";
 import MainBody from "./components/MainBody";
-import MainNav from "./components/MainNav";
 import headerLogo from "./assets/logo-fullName.png";
 import reportWebVitals from "./reportWebVitals";
 // import { ReactMarkdown } from "react-markdown/lib/react-markdown";
@@ -12,7 +11,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <HeaderNav logo={headerLogo} />
-    <MainNav />
     <MainBody />
   </React.StrictMode>
 );

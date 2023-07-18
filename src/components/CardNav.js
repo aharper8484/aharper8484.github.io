@@ -11,7 +11,7 @@ function CardNav(props) {
   const landingContent = `main landing page please`;
 
   // need to create landingContent variable and content
-  const [mainContent, setMainContent] = useState(landingContent);
+  const [mainContent, setMainContent] = useState(titleContent);
   const [toggle, setToggle] = useState(false);
 
   function displayMainContent(contentLink) {
@@ -28,7 +28,7 @@ function CardNav(props) {
       setToggle(!toggle);
       setMainContent(textContentLinks);
     } else {
-      setMainContent(props.title);
+      setMainContent(titleContent);
       setToggle(!toggle);
     }
   }
