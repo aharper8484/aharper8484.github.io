@@ -3,13 +3,15 @@ import { useState } from "react";
 import remarkGfm from "remark-gfm";
 
 function CardNav(props) {
+  const titleContent = `# ` + props.title;
   const textContentBio = `bio display`;
   const textContentSkills = `skills display`;
   const textContentTimeline = ` timeline display`;
   const textContentLinks = `skills display`;
+  const landingContent = `main landing page please`;
 
   // need to create landingContent variable and content
-  const [mainContent, setMainContent] = useState(null);
+  const [mainContent, setMainContent] = useState(landingContent);
   const [toggle, setToggle] = useState(false);
 
   function displayMainContent(contentLink) {
@@ -25,11 +27,18 @@ function CardNav(props) {
     } else if (toggle === false && props.title === "Links") {
       setToggle(!toggle);
       setMainContent(textContentLinks);
+    } else {
+      setMainContent(props.title);
+      setToggle(!toggle);
     }
   }
 
   return (
-    <div id={props.title} onClick={() => displayMainContent(props.title)}>
+    <div
+      id={props.title}
+      className="mainNavLink"
+      onClick={() => displayMainContent(props.title)}
+    >
       {
         // eslint-disable-next-line
       }

@@ -5,12 +5,12 @@ import CardNav from "./CardNav";
 
 function MainNav() {
   return (
-    <div className="mainContainer">
-      <div className="mainGrid">
-        <CardNav title="Bio" />
-        <CardNav title="Skills" />
-        <CardNav title="Timeline" />
-        <CardNav title="Links" />
+    <div className="mainNavContainer">
+      <div className="mainNavGrid">
+        <CardNav title="Bio" className="mainNavRowIcon" />
+        <CardNav title="Skills" className="mainNavRowIcon" />
+        <CardNav title="Timeline" className="mainNavRowIcon" />
+        <CardNav title="Links" className="mainNavRowIcon" />
       </div>
     </div>
   );

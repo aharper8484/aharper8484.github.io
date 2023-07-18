@@ -5,7 +5,7 @@ import remarkGfm from "remark-gfm";
 function Card(props) {
   const titleCardClass = " cardTitle";
   const textCardClass = " cardText";
-  const titleContent = `# ` + props.title;
+  const mainContent = `# ` + props.title;
   const textContentSkills = `
   # SKILLS
   * HTML
@@ -49,7 +49,7 @@ function Card(props) {
   
   HTML, CSS (SaSS), JavaScript (Typescript, React, NodeJS, Express), Wordpress (PHP)`;
 
-  const [mdContent, setMdContent] = useState(titleContent);
+  const [mdContent, setMdContent] = useState(mainContent);
   const [toggle, setToggle] = useState(false);
   const [currentClass, setClass] = useState(titleCardClass);
 
@@ -78,7 +78,7 @@ function Card(props) {
       setClass(textCardClass);
       setMdContent(textContentLinks);
     } else {
-      setMdContent(titleContent);
+      setMdContent(mainContent);
       setToggle(!toggle);
       setClass(titleCardClass);
       console.log(mdContent);
@@ -102,31 +102,6 @@ function Card(props) {
     return (
       <div className="imageCardContainer">
         <img className="cardImage" src={props.image} alt="Profile" />
-      </div>
-    );
-  } else if (props.contentType === "linkage") {
-    return (
-      <div className="linkCardContainer">
-        <div className="linkCardGrid">
-          <div className="linkCardItem">
-            <img className="iconImage" src={props.githubIcon} alt=""></img>
-          </div>
-          <div className="linkCardItem">
-            <img className="iconImage" src={props.linkedinIcon} alt=""></img>
-          </div>
-          <div className="linkCardItem">
-            <img className="iconImage" src={props.resumeIcon} alt=""></img>
-          </div>
-          <div className="linkCardItem linkText">
-            <ReactMarkdown>**aharper8484@gmail.com**</ReactMarkdown>
-          </div>
-          <div className="linkCardItem linkText">
-            <ReactMarkdown>**07980686594**</ReactMarkdown>
-          </div>
-          <div className="linkCardItem linkText">
-            <ReactMarkdown>**Website Link**</ReactMarkdown>
-          </div>
-        </div>
       </div>
     );
   }
