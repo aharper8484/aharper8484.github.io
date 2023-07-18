@@ -7,15 +7,15 @@ import Card from "./Card";
 import ProfileImage from "./ProfileImage";
 
 function MainBody(props) {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeView, setActiveView] = useState("landing");
 
   return (
     <div>
-      <MainNav setActiveIndex={setActiveIndex}></MainNav>
+      <MainNav setActiveIndex={setActiveView}></MainNav>
       <div className="mainContainer">
         <ProfileImage></ProfileImage>
         <div className="mainGrid">
-          <Card title="landingContent" contentType={activeIndex} />
+          <Card title="landingContent" contentType={activeView} />
         </div>
       </div>
     </div>

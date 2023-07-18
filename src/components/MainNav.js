@@ -10,22 +10,22 @@ function MainNav(props) {
         <CardNav
           title="Bio"
           className="mainNavRowIcon"
-          onClick={() => props.setActiveIndex(1)}
+          onClick={() => props.setActiveIndex("bio")}
         />
         <CardNav
           title="Skills"
           className="mainNavRowIcon"
-          onClick={() => props.setActiveIndex(2)}
+          onClick={() => props.setActiveIndex("skills")}
         />
         <CardNav
           title="Timeline"
           className="mainNavRowIcon"
-          onClick={() => props.setActiveIndex(3)}
+          onClick={() => props.setActiveIndex("timeline")}
         />
         <CardNav
           title="Links"
           className="mainNavRowIcon"
-          onClick={() => props.setActiveIndex(4)}
+          onClick={() => props.setActiveIndex("links")}
         />
       </div>
     </div>

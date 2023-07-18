@@ -52,6 +52,7 @@ function Card(props) {
   const [mdContent, setMdContent] = useState(props.contentType);
   const [toggle, setToggle] = useState(false);
   const [currentClass, setClass] = useState(titleCardClass);
+  console.log(props.contentType);
 
   //   const handleClick = (e) => {
   //     e.preventDefault();
@@ -61,19 +62,19 @@ function Card(props) {
 
   // TODO - fix toggle
   function displayContent(title) {
-    if (toggle === false && props.contentType === 1) {
+    if (toggle === false && props.contentType === "bio") {
       setToggle(!toggle);
       setClass(textCardClass);
       setMdContent(textContentBio);
-    } else if (toggle === false && props.contentType === 2) {
+    } else if (toggle === false && props.contentType === "skills") {
       setToggle(!toggle);
       setClass(textCardClass);
       setMdContent(textContentSkills);
-    } else if (toggle === false && props.contentType === 3) {
+    } else if (toggle === false && props.contentType === "timeline") {
       setToggle(!toggle);
       setClass(textCardClass);
       setMdContent(textContentTimeline);
-    } else if (toggle === false && props.contentType === 4) {
+    } else if (toggle === false && props.contentType === "links") {
       setToggle(!toggle);
       setClass(textCardClass);
       setMdContent(textContentLinks);
@@ -86,11 +87,7 @@ function Card(props) {
   }
 
   return (
-    <div
-      className={"textCardContainer " + currentClass}
-      id={props.title}
-      onClick={() => displayContent(props.setActiveIndex)}
-    >
+    <div className={"textCardContainer " + currentClass} id={props.title}>
       {
         // eslint-disable-next-line
       }
