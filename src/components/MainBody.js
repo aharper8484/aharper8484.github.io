@@ -2,18 +2,14 @@ import React from "react";
 import "./MainBody.css";
 import "./CardToggle";
 import Card from "./Card";
+import ProfileImage from "./profileImage";
 import profilePhoto from "../assets/profile-photo.jpg";
 
 function MainBody(props) {
   return (
     <div className="mainContainer">
+      <ProfileImage></ProfileImage>
       <div className="mainGrid">
-        <Card
-          title="Image"
-          contentType="image"
-          image={profilePhoto}
-          id="profileImage"
-        />
         <Card title="Bio" contentType="text" />
       </div>
     </div>
