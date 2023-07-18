@@ -22,22 +22,6 @@ secondary - murkyGreen 006600
   justify-content: space-between;
 }
 
-.mainNavRowIcon {
-  /* width: 220px;
-  height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffac1b;
-  color: #800000;
-  border: 8px solid #ff771b;
-  border-radius: 25px;
-  transition: width 0.5s, height 1s, transform 0.5s;
-  transform-style: preserve-3d;
-  box-shadow: 5px 10px #e0dfdf;
-  z-index: 1; */
-}
-
 .mainNavLink {
   transition: 2s;
 }

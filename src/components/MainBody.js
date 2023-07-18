@@ -2,8 +2,7 @@ import React from "react";
 import "./MainBody.css";
 import "./CardToggle";
 import Card from "./Card";
-import ProfileImage from "./profileImage";
-import profilePhoto from "../assets/profile-photo.jpg";
+import ProfileImage from "./ProfileImage";
 
 function MainBody(props) {
   return (
