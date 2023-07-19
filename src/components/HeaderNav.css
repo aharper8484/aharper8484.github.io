@@ -1,10 +1,8 @@
 .navbar {
-  border: solid red 1px;
   height: 100px;
   width: 100%;
   display: inline-flex;
   align-items: center;
-  /* flex-wrap: wrap; */
 }
 
 h1 {
@@ -15,31 +13,26 @@ h1 {
   width: 50%;
   height: 100%;
   margin: auto;
-  border: solid orange 1px;
 }
 
 .navIconContainer {
   width: 50%;
   height: 100%;
-  border: solid green 1px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
-/* TODO - add function to change logo based on screeen size */
 img.navLogo {
   width: 100%;
   height: 90%;
   object-fit: contain;
-  /* margin-left: 5px;
-  margin-right: auto;
-  padding: 5px; */
 }
 
 img.navIcon {
   width: 30px;
   height: 30px;
   padding: 10px;
+  margin: 10px;
   object-fit: cover;
-  margin: auto;
 }

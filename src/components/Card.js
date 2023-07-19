@@ -1,5 +1,4 @@
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-import { useState } from "react";
 import remarkGfm from "remark-gfm";
 
 function Card(props) {
@@ -47,37 +46,61 @@ function Card(props) {
   
   HTML, CSS (SaSS), JavaScript (Typescript, React, NodeJS, Express), Wordpress (PHP)`;
 
-  const [mdContent, setMdContent] = useState(props.contentType);
-
-  function displayContent(title) {
-    if (props.contentType === "bio") {
-      setMdContent(textContentBio);
-    } else if (props.contentType === "skills") {
-      setMdContent(textContentSkills);
-    } else if (props.contentType === "timeline") {
-      setMdContent(textContentTimeline);
-    } else if (props.contentType === "links") {
-      setMdContent(textContentLinks);
-    } else {
-      setMdContent(mainContent);
-    }
+  if (props.contentType === "bio") {
+    return (
+      <div className={"textCardContainer"} id="bio">
+        {
+          // eslint-disable-next-line
+        }
+        <ReactMarkdown children={textContentBio} remarkPlugins={[remarkGfm]} />
+      </div>
+    );
+  } else if (props.contentType === "skills") {
+    return (
+      <div className={"textCardContainer"} id="skills">
+        {
+          // eslint-disable-next-line
+        }
+        <ReactMarkdown
+          children={textContentSkills}
+          remarkPlugins={[remarkGfm]}
+        />
+      </div>
+    );
+  } else if (props.contentType === "timeline") {
+    return (
+      <div className={"textCardContainer"} id="timeline">
+        {
+          // eslint-disable-next-line
+        }
+        <ReactMarkdown
+          children={textContentTimeline}
+          remarkPlugins={[remarkGfm]}
+        />
+      </div>
+    );
+  } else if (props.contentType === "links") {
+    return (
+      <div className={"textCardContainer"} id="links">
+        {
+          // eslint-disable-next-line
+        }
+        <ReactMarkdown
+          children={textContentLinks}
+          remarkPlugins={[remarkGfm]}
+        />
+      </div>
+    );
+  } else {
+    return (
+      <div className={"textCardContainer"} id={props.title}>
+        {
+          // eslint-disable-next-line
+        }
+        <ReactMarkdown children={mainContent} remarkPlugins={[remarkGfm]} />
+      </div>
+    );
   }
-
-  console.log(props.contentType);
-  console.log(mdContent);
-
-  return (
-    <div
-      className={"textCardContainer"}
-      id={props.title}
-      onChange={(e) => displayContent(e.target.props.contentType)}
-    >
-      {
-        // eslint-disable-next-line
-      }
-      <ReactMarkdown children={mdContent} remarkPlugins={[remarkGfm]} />
-    </div>
-  );
 }
 
 export default Card;
