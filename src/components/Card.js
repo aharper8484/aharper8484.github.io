@@ -3,8 +3,6 @@ import { useState } from "react";
 import remarkGfm from "remark-gfm";
 
 function Card(props) {
-  const titleCardClass = " cardTitle";
-  const textCardClass = " cardText";
   const mainContent = `# Landing Page Content to be built here!`;
   const textContentSkills = `
   # SKILLS
@@ -50,44 +48,30 @@ function Card(props) {
   HTML, CSS (SaSS), JavaScript (Typescript, React, NodeJS, Express), Wordpress (PHP)`;
 
   const [mdContent, setMdContent] = useState(props.contentType);
-  const [toggle, setToggle] = useState(false);
-  const [currentClass, setClass] = useState(titleCardClass);
-  console.log(props.contentType);
 
-  //   const handleClick = (e) => {
-  //     e.preventDefault();
-  //     setToggle(!false);
-  //     displayContent();
-  //   };
-
-  // TODO - fix toggle
   function displayContent(title) {
-    if (toggle === false && props.contentType === "bio") {
-      setToggle(!toggle);
-      setClass(textCardClass);
+    if (props.contentType === "bio") {
       setMdContent(textContentBio);
-    } else if (toggle === false && props.contentType === "skills") {
-      setToggle(!toggle);
-      setClass(textCardClass);
+    } else if (props.contentType === "skills") {
       setMdContent(textContentSkills);
-    } else if (toggle === false && props.contentType === "timeline") {
-      setToggle(!toggle);
-      setClass(textCardClass);
+    } else if (props.contentType === "timeline") {
       setMdContent(textContentTimeline);
-    } else if (toggle === false && props.contentType === "links") {
-      setToggle(!toggle);
-      setClass(textCardClass);
+    } else if (props.contentType === "links") {
       setMdContent(textContentLinks);
     } else {
       setMdContent(mainContent);
-      setToggle(!toggle);
-      setClass(titleCardClass);
-      console.log(mdContent);
     }
   }
 
+  console.log(props.contentType);
+  console.log(mdContent);
+
   return (
-    <div className={"textCardContainer " + currentClass} id={props.title}>
+    <div
+      className={"textCardContainer"}
+      id={props.title}
+      onChange={(e) => displayContent(e.target.props.contentType)}
+    >
       {
         // eslint-disable-next-line
       }
