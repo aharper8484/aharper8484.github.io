@@ -1,16 +1,9 @@
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import remarkGfm from "remark-gfm";
+import Timeline from "../components/Timeline";
 
 function Card(props) {
-  const mainContent = `# Landing Page Content to be built here!`;
-  const textContentSkills = `
-  # SKILLS
-  * HTML
-  * CSS (SaSS)
-  * JavaScript (ReactJS, NodeJS, Express)
-  * Wordpress (PHP, SQL)
-  `;
-  const textContentTimeline = `Timeline to be completed`;
+  const textContentBlog = `Blog section to be completed`;
   const textContentLinks = `
   # LINKS
   * Blog Site (TBC)
@@ -55,28 +48,10 @@ function Card(props) {
         <ReactMarkdown children={textContentBio} remarkPlugins={[remarkGfm]} />
       </div>
     );
-  } else if (props.contentType === "skills") {
-    return (
-      <div className={"textCardContainer"} id="skills">
-        {
-          // eslint-disable-next-line
-        }
-        <ReactMarkdown
-          children={textContentSkills}
-          remarkPlugins={[remarkGfm]}
-        />
-      </div>
-    );
   } else if (props.contentType === "timeline") {
     return (
       <div className={"textCardContainer"} id="timeline">
-        {
-          // eslint-disable-next-line
-        }
-        <ReactMarkdown
-          children={textContentTimeline}
-          remarkPlugins={[remarkGfm]}
-        />
+        <Timeline></Timeline>
       </div>
     );
   } else if (props.contentType === "links") {
@@ -91,13 +66,39 @@ function Card(props) {
         />
       </div>
     );
-  } else {
+  } else if (props.contentType === "blog") {
     return (
-      <div className={"textCardContainer"} id={props.title}>
+      <div className={"textCardContainer"} id="blog">
         {
           // eslint-disable-next-line
         }
-        <ReactMarkdown children={mainContent} remarkPlugins={[remarkGfm]} />
+        <ReactMarkdown children={textContentBlog} remarkPlugins={[remarkGfm]} />
+      </div>
+    );
+  } else {
+    return (
+      <div className={"textCardContainer"} id={props.title}>
+        <h1 id="landingHeader">Yorkshire based developer, specialising in:</h1>
+        <div className="landingGrid">
+          <div className="landingGridItem">
+            <h1>JavaScript</h1>
+          </div>
+          <div className="landingGridItem">
+            <h1>React</h1>
+          </div>
+          <div className="landingGridItem">
+            <h1>Node.JS, Express</h1>
+          </div>
+          <div className="landingGridItem">
+            <h1>Wordpress, PHP, SQL</h1>
+          </div>
+          <div className="landingGridItem">
+            <h1>HTML</h1>
+          </div>
+          <div className="landingGridItem">
+            <h1>CSS</h1>
+          </div>
+        </div>
       </div>
     );
   }

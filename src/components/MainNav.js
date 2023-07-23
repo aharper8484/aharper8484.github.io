@@ -27,6 +27,11 @@ function MainNav(props) {
           className="mainNavRowIcon"
           onClick={() => props.setActiveIndex("links")}
         />
+        <CardNav
+          title="Blog"
+          className="mainNavRowIcon"
+          onClick={() => props.setActiveIndex("blog")}
+        />
       </div>
     </div>
   );

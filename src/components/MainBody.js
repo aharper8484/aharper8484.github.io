@@ -27,13 +27,6 @@ function MainBody(props) {
             <ReactMarkdown># Bio</ReactMarkdown>
           </div>
           <div
-            id="skills"
-            className="mainNavLink"
-            onClick={() => toggleMainView("skills")}
-          >
-            <ReactMarkdown># Skills</ReactMarkdown>
-          </div>
-          <div
             id="timeline"
             className="mainNavLink"
             onClick={() => toggleMainView("timeline")}
@@ -46,6 +39,13 @@ function MainBody(props) {
             onClick={() => toggleMainView("links")}
           >
             <ReactMarkdown># Links</ReactMarkdown>
+          </div>
+          <div
+            id="blog"
+            className="mainNavBlog"
+            onClick={() => toggleMainView("blog")}
+          >
+            <ReactMarkdown># Blog</ReactMarkdown>
           </div>
         </div>
       </div>

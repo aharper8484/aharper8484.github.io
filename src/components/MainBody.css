@@ -20,7 +20,7 @@ secondary - murkyGreen 006600
 }
 
 #profileImage {
-  width: 320px;
+  width: 230px;
   float: right;
   position: absolute;
   margin: 0px 0px 15px 15px;
@@ -30,49 +30,39 @@ secondary - murkyGreen 006600
 }
 
 .textCardContainer {
-  width: 80%;
+  width: 50%;
   margin-right: 20%;
   margin-left: 20%;
   padding: 5px;
   height: 60vh;
+  overflow-y: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 25px;
   transition: width 0.5s, height 1s, transform 0.5s;
   transform-style: preserve-3d;
+
   /* box-shadow: 5px 10px #efefef; */
   z-index: 1;
 }
 
 #bio.textCardContainer {
   display: block;
-  border: 2px solid rgb(244, 243, 243);
+  border: 2px solid rgb(248, 248, 248);
   font-size: smaller;
   text-align: left;
-  height: fit-content;
+  /* height: fit-content;*/
   word-wrap: break-word;
   transition: width 2s, height 3s, transform 2s;
   transform-style: flat;
   transition-property: width;
 }
 
-#skills.textCardContainer {
-  display: block;
-  display: block;
-  border: 2px solid rgb(244, 243, 243);
-  font-size: smaller;
-  text-align: left;
-  word-wrap: break-word;
-  transition: width 2s, height 2s, transform 1s;
-  transform-style: flat;
-  transition-property: width;
-}
-
 #timeline.textCardContainer {
   display: block;
-  display: block;
-  border: 2px solid lightgray;
+  width: 90vw;
+  border: 2px solid rgb(248, 248, 248);
   font-size: smaller;
   text-align: left;
   word-wrap: break-word;
@@ -84,13 +74,66 @@ secondary - murkyGreen 006600
 #links.textCardContainer {
   display: block;
   display: block;
-  border: 2px solid rgb(244, 243, 243);
+  border: 2px solid rgb(248, 248, 248);
   font-size: smaller;
   text-align: left;
   word-wrap: break-word;
   transition: width 2s, height 2s, transform 1s;
   transform-style: flat;
   transition-property: width;
+}
+
+#blog.textCardContainer {
+  display: block;
+  display: block;
+  border: 2px solid rgb(248, 248, 248);
+  font-size: smaller;
+  text-align: left;
+  word-wrap: break-word;
+  transition: width 2s, height 2s, transform 1s;
+  transform-style: flat;
+  transition-property: width;
+}
+
+#landingContent.textCardContainer {
+  display: block;
+  display: block;
+  border: 2px solid rgb(248, 248, 248);
+  font-size: smaller;
+  text-align: left;
+  word-wrap: break-word;
+  transition: width 2s, height 2s, transform 1s;
+  transform-style: flat;
+  transition-property: width;
+}
+
+#landingHeader {
+  text-align: center;
+}
+
+.landingGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.landingGridItem {
+  width: 160px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding: 10px;
+  border: solid 6px #800000;
+  border-radius: 10%;
+}
+
+h1.landingGridItem {
+  justify-content: center;
+  align-items: center;
 }
 
 p.cardText::after {
@@ -105,6 +148,9 @@ p.cardText::after {
     margin-right: 10%;
     margin-left: 10%;
   }
+  #profileImage {
+    opacity: 10%;
+  }
 }
 @media (min-width: 481px) {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
@@ -112,6 +158,12 @@ p.cardText::after {
     width: 90%;
     margin-right: 10%;
     margin-left: 10%;
+  }
+  #profileImage {
+    opacity: 10%;
+  }
+  #timeline.textCardContainer {
+    width: 90vw;
   }
 }
 @media (min-width: 641px) {
@@ -121,6 +173,12 @@ p.cardText::after {
     margin-right: 20%;
     margin-left: 20%;
   }
+  #profileImage {
+    opacity: 10%;
+  }
+  #timeline.textCardContainer {
+    width: 90vw;
+  }
 }
 @media (min-width: 961px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
@@ -128,6 +186,12 @@ p.cardText::after {
     width: 80%;
     margin-right: 20%;
     margin-left: 20%;
+  }
+  #profileImage {
+    opacity: 10%;
+  }
+  #timeline.textCardContainer {
+    width: 90vw;
   }
 }
 @media (min-width: 1025px) {
@@ -137,6 +201,12 @@ p.cardText::after {
     margin-right: 20%;
     margin-left: 20%;
   }
+  #profileImage {
+    opacity: 10%;
+  }
+  #timeline.textCardContainer {
+    width: 90vw;
+  }
 }
 
 @media (min-width: 1281px) {
@@ -145,5 +215,11 @@ p.cardText::after {
     width: 80%;
     margin-right: 20%;
     margin-left: 20%;
+  }
+  #profileImage {
+    opacity: 10%;
+  }
+  #timeline.textCardContainer {
+    width: 90vw;
   }
 }
