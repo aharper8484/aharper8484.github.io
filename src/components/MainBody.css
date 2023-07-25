@@ -66,7 +66,7 @@ secondary - murkyGreen 006600
   font-size: smaller;
   text-align: left;
   word-wrap: break-word;
-  transition: width 2s, height 2s, transform 1s;
+  transition: width 1s, height 2s, transform 1s;
   transform-style: flat;
   transition-property: width;
 }
@@ -78,7 +78,7 @@ secondary - murkyGreen 006600
   font-size: smaller;
   text-align: left;
   word-wrap: break-word;
-  transition: width 2s, height 2s, transform 1s;
+  transition: width 1s, height 2s, transform 1s;
   transform-style: flat;
   transition-property: width;
 }
@@ -90,7 +90,7 @@ secondary - murkyGreen 006600
   font-size: smaller;
   text-align: left;
   word-wrap: break-word;
-  transition: width 2s, height 2s, transform 1s;
+  transition: width 1s, height 2s, transform 1s;
   transform-style: flat;
   transition-property: width;
 }
@@ -102,7 +102,7 @@ secondary - murkyGreen 006600
   font-size: smaller;
   text-align: left;
   word-wrap: break-word;
-  transition: width 2s, height 2s, transform 1s;
+  transition: width 1s, height 2s, transform 1s;
   transform-style: flat;
   transition-property: width;
 }
