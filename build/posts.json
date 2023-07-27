@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "dateCreated": "28-06-2023",
+      "title": "Blog - First Post",
+      "postCategory": "personal",
+      "postTags": ["personal", "pinned"],
+      "postContent": "First Post This is an example of my first ever blog post to appear in my React based blog This H2"
+    },
+    {
+      "id": 2,
+      "dateCreated": "29-06-2023",
+      "title": "Blog - Second Post",
+      "postCategory": "professinal",
+      "postTags": ["professional", "attitude"],
+      "postContent": "econd Post This is an example of my second ever blog post to appear in my React based blog This is a H2"
+    },
+    {
+      "id": 3,
+      "dateCreated": "12-06-2023",
+      "title": "Blog - Old Post",
+      "postCategory": "technical",
+      "postTags": ["pyhton", "mern"],
+      "postContent": "Technical PostThis is an example of my first ever blog post to appear in my React based blog This is a H2"
+    },
+    {
+      "id": 4,
+      "dateCreated": "29-06-2023",
+      "title": "Blog - Misc Post",
+      "postCategory": "personal",
+      "postTags": ["misc", "resume", "bio"],
+      "postContent": "My Bio This is a bio post to explain my background This is a H2"
+    }
+  ]
+}
