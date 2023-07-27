@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cc015324.css",
+    "main.js": "/static/js/main.f632e044.js",
+    "static/js/787.0d27bceb.chunk.js": "/static/js/787.0d27bceb.chunk.js",
+    "static/media/logo-fullName.png": "/static/media/logo-fullName.4327279208c508b18fdd.png",
+    "static/media/profileSketch.png": "/static/media/profileSketch.bef7d555c8774bf30e83.png",
+    "static/media/adamHarperCV.pdf": "/static/media/adamHarperCV.4e178c10c178d97868ee.pdf",
+    "index.html": "/index.html",
+    "main.cc015324.css.map": "/static/css/main.cc015324.css.map",
+    "main.f632e044.js.map": "/static/js/main.f632e044.js.map",
+    "787.0d27bceb.chunk.js.map": "/static/js/787.0d27bceb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc015324.css",
+    "static/js/main.f632e044.js"
+  ]
+}
