@@ -2,6 +2,7 @@ import "./HeaderNav.css";
 import githubIcon from "../assets/github-icon.png";
 import linkedinIcon from "../assets/linkedin-icon.png";
 import resumeIcon from "../assets/resume-icon.png";
+import cvLink from "../assets/adamHarperCV.pdf";
 
 function HeaderNav(props) {
   return (
@@ -21,7 +22,7 @@ function HeaderNav(props) {
             id="linkedin"
           ></img>
         </a>
-        <a href="../assets/adamHarperCV.pdf" download="adamHarperCV">
+        <a href={cvLink} download="adamHarperCV">
           <img src={resumeIcon} alt="" className="navIcon" id="resume"></img>
         </a>
       </div>
