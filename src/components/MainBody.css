@@ -120,15 +120,25 @@ secondary - murkyGreen 006600
 }
 
 .landingGridItem {
-  width: 160px;
+  width: 170px;
   height: 120px;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
   padding: 10px;
-  border: solid 6px #800000;
-  border-radius: 10%;
+  /* border: solid 6px #800000; */
+  background-color: #803a00;
+  color: white;
+  /* border-radius: 10%; */
+}
+
+.primarySkill.landingGridItem {
+  background-color: #006600;
+}
+
+.secondarySkill.landingGridItem {
+  background-color: #004d4d;
 }
 
 h1.landingGridItem {

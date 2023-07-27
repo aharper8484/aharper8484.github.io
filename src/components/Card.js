@@ -4,11 +4,6 @@ import Timeline from "../components/Timeline";
 
 function Card(props) {
   const textContentBlog = `Blog section to be completed`;
-  const textContentLinks = `
-  # LINKS
-  * Blog Site (TBC)
-  * InHealthcare
-  `;
   const textContentBio = `
   # BIO
 
@@ -54,18 +49,6 @@ function Card(props) {
         <Timeline></Timeline>
       </div>
     );
-  } else if (props.contentType === "links") {
-    return (
-      <div className={"textCardContainer"} id="links">
-        {
-          // eslint-disable-next-line
-        }
-        <ReactMarkdown
-          children={textContentLinks}
-          remarkPlugins={[remarkGfm]}
-        />
-      </div>
-    );
   } else if (props.contentType === "blog") {
     return (
       <div className={"textCardContainer"} id="blog">
@@ -80,17 +63,17 @@ function Card(props) {
       <div className={"textCardContainer"} id={props.title}>
         <h1 id="landingHeader">Yorkshire based developer, specialising in:</h1>
         <div className="landingGrid">
-          <div className="landingGridItem">
+          <div className="landingGridItem primarySkill">
             <h1>JavaScript</h1>
           </div>
-          <div className="landingGridItem">
+          <div className="landingGridItem primarySkill">
+            <h1>Wordpress, PHP, SQL</h1>
+          </div>
+          <div className="landingGridItem secondarySkill">
             <h1>React</h1>
           </div>
-          <div className="landingGridItem">
+          <div className="landingGridItem secondarySkill">
             <h1>Node.JS, Express</h1>
-          </div>
-          <div className="landingGridItem">
-            <h1>Wordpress, PHP, SQL</h1>
           </div>
           <div className="landingGridItem">
             <h1>HTML</h1>

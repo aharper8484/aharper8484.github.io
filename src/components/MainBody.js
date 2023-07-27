@@ -34,13 +34,6 @@ function MainBody(props) {
             <ReactMarkdown># Timeline</ReactMarkdown>
           </div>
           <div
-            id="links"
-            className="mainNavLink"
-            onClick={() => toggleMainView("links")}
-          >
-            <ReactMarkdown># Links</ReactMarkdown>
-          </div>
-          <div
             id="blog"
             className="mainNavBlog"
             onClick={() => toggleMainView("blog")}

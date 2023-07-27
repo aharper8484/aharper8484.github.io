@@ -8,8 +8,16 @@
   box-sizing: border-box;
 }
 
+.titleTL {
+  color: rgb(240, 240, 240);
+}
+
+.descrTL {
+  color: rgb(233, 233, 233);
+}
+
 #timeline body {
-  --color: rgba(30, 30, 30);
+  --color: white;
   --bgColor: rgba(245, 245, 245);
   min-height: 100vh;
   display: grid;
@@ -26,7 +34,7 @@
 
 #timeline ul {
   --col-gap: 2rem;
-  --row-gap: 2rem;
+  --row-gap: 10rem;
   --line-w: 0.25rem;
   display: grid;
   grid-template-columns: var(--line-w) 1fr;
@@ -42,7 +50,7 @@
   content: "";
   grid-column: 1;
   grid-row: 1 / span 20;
-  background: rgb(225, 225, 225);
+  background: black;
   border-radius: calc(var(--line-w) / 2);
 }
 
@@ -56,7 +64,7 @@
 /* card */
 #timeline ul li {
   grid-column: 2;
-  --inlineP: 1.5rem;
+  --inlineP: 3rem;
   margin-inline: var(--inlineP);
   grid-row: span 2;
   display: grid;
@@ -84,7 +92,7 @@
 }
 
 /* date flap */
-#timeline ul li .dateTL::before {
+/* #timeline ul li .dateTL::before {
   content: "";
   width: var(--inlineP);
   aspect-ratio: 1;
@@ -92,10 +100,9 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
   position: absolute;
   top: 100%;
-
   clip-path: polygon(0 0, 100% 0, 0 100%);
   right: 0;
-}
+} */
 
 /* circle */
 #timeline ul li .dateTL::after {
@@ -103,11 +110,10 @@
   position: absolute;
   width: 2rem;
   aspect-ratio: 1;
-  background: var(--bgColor);
-  border: 0.3rem solid var(--accent-color);
+  background: white;
+  border: 0.3rem solid black;
   border-radius: 50%;
   top: 50%;
-
   transform: translate(50%, -50%);
   right: calc(100% + var(--col-gap) + var(--line-w) / 2);
 }
