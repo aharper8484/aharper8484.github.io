@@ -8,7 +8,9 @@ function HeaderNav(props) {
   return (
     <div className="navbar">
       <div className="navLogoContainer">
-        <img src={props.logo} alt="" className="navLogo"></img>
+        <a href="https://aharper8484.github.io/" target="__blank">
+          <img src={props.logo} alt="" className="navLogo"></img>
+        </a>
       </div>
       <div className="navIconContainer">
         <a href="https://github.com/aharper8484" target="__blank">
