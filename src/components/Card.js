@@ -15,14 +15,14 @@ function Card(props) {
   
   Following two years of balancing full-time studies at the University of Huddersfield (BSc Web Programming) and part-time work in International Trade I left my studies after being offered the role of Application Developer.
   
-  [InHealthcare](https://www.inhealthcare.co.uk/) provide digital pathway services to the Healthcare sector to improve and innovate how certain conditions are handled. There are many success stories where hospital beds are freed up and patient monitoring has helped improve the lives of many.
+  [InHealthcare](https://www.inhealthcare.co.uk/){:target=”_blank”}  provide digital pathway services to the Healthcare sector to improve and innovate how certain conditions are handled. There are many success stories where hospital beds are freed up and patient monitoring has helped improve the lives of many.
   
   Using Agile sprint methodologies, as well as using the in-house IDE to design and build these services, my day-to-day tasks have spread to automated testing and composing user stories based upon requirements gathered from the client. Accuracy and efficiency are vital for these services so my ability to solve problems and analyse complex documents have been helpful. I find it rewarding to know that my work is improving the lives of others.
   
   Notable projects are:
   
-  - [Priory](https://www.priorygroup.com/)
-  - [Health Call Frailty Virtual Ward](https://nhshealthcall.co.uk/product/nhs-virtual-ward/)
+  - [Priory](https://www.priorygroup.com/){:target=”_blank”} 
+  - [Health Call Frailty Virtual Ward](https://nhshealthcall.co.uk/product/nhs-virtual-ward/){:target=”_blank”} 
   
   Technologies used at InHealthcare:
   
