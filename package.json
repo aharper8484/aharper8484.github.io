@@ -20,7 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",react app where to add homepage to json
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
