@@ -32,7 +32,7 @@ img.navLogo {
 img.navIcon {
   width: 30px;
   height: 30px;
-  padding: 10px;
-  margin: 10px;
+  padding: 5px;
+  margin: 5px;
   object-fit: cover;
 }
