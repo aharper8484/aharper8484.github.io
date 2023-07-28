@@ -17,11 +17,12 @@ secondary - murkyGreen 006600
   display: inline-flex;
   width: 80%;
   height: auto;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .mainNavLink {
   transition: 2s;
+  margin: 0px 5px 0px 5px;
 }
 
 .mainNavLink:hover {
