@@ -4,14 +4,17 @@ import "./index.css";
 import HeaderNav from "./components/HeaderNav";
 import MainBody from "./components/MainBody";
 import headerLogo from "./assets/logo-fullName.png";
+import { HashRouter as Router } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 // import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <HeaderNav logo={headerLogo} />
-    <MainBody />
+    <Router>
+      <HeaderNav logo={headerLogo} />
+      <MainBody />
+    </Router>
   </React.StrictMode>
 );
 
