@@ -25,36 +25,41 @@ function HeaderNav(props) {
           <img src={props.logo} alt="" className="navLogo"></img>
         </a>
       </div>
-      <div className="navIconContainer">
-        <a href="https://github.com/aharper8484" target="__blank">
-          <img src={githubIcon} alt="" className="navIcon" id="github"></img>
-        </a>
-        <a href="https://www.linkedin.com/in/adamharper8484/" target="__blank">
-          <img
-            src={linkedinIcon}
-            alt=""
-            className="navIcon"
-            id="linkedin"
-          ></img>
-        </a>
-        <a href={cvLink} download="adamHarperCV">
-          <img src={resumeIcon} alt="" className="navIcon" id="resume"></img>
-        </a>
-      </div>
-      <div className="mainNavContainer">
-        <div
-          id="bio"
-          className="mainNavLink"
-          // onClick={() => toggleMainView("bio")}
-        >
-          <ReactMarkdown># Bio</ReactMarkdown>
+      <div class="navBlock">
+        <div className="mainNavContainer">
+          <div
+            id="bio"
+            className="mainNavLink"
+            // onClick={() => toggleMainView("bio")}
+          >
+            <ReactMarkdown># Bio</ReactMarkdown>
+          </div>
+          <div
+            id="timeline"
+            className="mainNavLink"
+            // onClick={() => toggleMainView("timeline")}
+          >
+            <ReactMarkdown># Timeline</ReactMarkdown>
+          </div>
         </div>
-        <div
-          id="timeline"
-          className="mainNavLink"
-          // onClick={() => toggleMainView("timeline")}
-        >
-          <ReactMarkdown># Timeline</ReactMarkdown>
+        <div className="navIconContainer">
+          <a href="https://github.com/aharper8484" target="__blank">
+            <img src={githubIcon} alt="" className="navIcon" id="github"></img>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/adamharper8484/"
+            target="__blank"
+          >
+            <img
+              src={linkedinIcon}
+              alt=""
+              className="navIcon"
+              id="linkedin"
+            ></img>
+          </a>
+          <a href={cvLink} download="adamHarperCV">
+            <img src={resumeIcon} alt="" className="navIcon" id="resume"></img>
+          </a>
         </div>
       </div>
     </div>

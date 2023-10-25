@@ -12,6 +12,13 @@ h1 {
   font-size: 1.5rem;
 }
 
+.navBlock {
+  width: 50%;
+  height: 100%;
+  display: inline-flex;
+  border: orange solid 3px;
+}
+
 .navLogoContainer {
   width: 50%;
   height: 100%;
@@ -31,18 +38,18 @@ h1 {
 .navbar .mainNavContainer {
   width: 50%;
   height: 100%;
-  display: flex;
+  /* display: flex;
   display: inline-flex;
-  align-items: center;
+  align-items: center; */
   justify-content: space-evenly;
   border: purple solid 3px;
 }
 
 img.navLogo {
   width: 100%;
-  height: 90%;
+  height: 100%;
   object-fit: contain;
-  margin: 5px 5px 5px 0px;
+  margin: 5px 5px 5px 5px;
 }
 
 img.navIcon {
