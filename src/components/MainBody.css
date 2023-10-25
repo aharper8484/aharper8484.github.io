@@ -5,8 +5,8 @@ secondary - murkyGreen 006600
 */
 
 .mainContainer {
-  display: grid;
-  place-items: left;
+  display: flex;
+  border: yellow 3px solid;
 }
 
 .mainGrid {
@@ -17,6 +17,7 @@ secondary - murkyGreen 006600
   justify-items: center;
   justify-content: flex-end;
   row-gap: 20px;
+  border: red 3px solid;
 }
 
 #profileImage {
@@ -30,11 +31,11 @@ secondary - murkyGreen 006600
 }
 
 .textCardContainer {
-  width: 50%;
+  width: 60%;
   margin-right: 20%;
   margin-left: 20%;
   padding: 5px;
-  height: 60vh;
+  height: 100%;
   overflow-y: auto;
   display: flex;
   align-items: center;
@@ -42,8 +43,9 @@ secondary - murkyGreen 006600
   border-radius: 25px;
   transition: width 0.5s, height 1s, transform 0.5s;
   transform-style: preserve-3d;
+  border: red 3px solid;
 
-  /* box-shadow: 5px 10px #efefef; */
+  box-shadow: 5px 10px #efefef;
   z-index: 1;
 }
 
@@ -105,8 +107,8 @@ secondary - murkyGreen 006600
   transition: width 1s, height 2s, transform 1s;
   transform-style: flat;
   transition-property: width;
-  overflow-y: visible;
-  height: auto;
+  /* overflow-y: visible; */
+  /* height: auto; */
 }
 
 #landingHeader {
@@ -130,7 +132,7 @@ secondary - murkyGreen 006600
   align-content: center;
   flex-direction: column;
   padding: 10px;
-  /* border: solid 6px #800000; */
+  border: solid 6px #800000;
   background-color: #803a00;
   color: white;
   /* border-radius: 10%; */
