@@ -5,6 +5,16 @@ function Timeline() {
     <div>
       <h1>Adam Harper's Life (so far)</h1>
       <ul>
+        <li style={{ background: `#800000` }}>
+          <div className="dateTL">October 2023</div>
+          <div className="titleTL">Outfox Code</div>
+          <div className="descrTL">
+            <a href="https://outfox-code.com/" target="blank">
+              Outfox Code
+            </a>{" "}
+            goes live - a personal development resource for aspring programmers.
+          </div>
+        </li>
         <li style={{ background: `#006600` }}>
           <div className="dateTL">May 2023</div>
           <div className="titleTL">I'm a Dad!</div>

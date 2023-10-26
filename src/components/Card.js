@@ -1,13 +1,17 @@
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import remarkGfm from "remark-gfm";
 import Timeline from "../components/Timeline";
+import style from "../components/markdown-styles.module.css";
 
 function Card(props) {
-  const textContentBlog = `Blog section to be completed`;
+  const textContentWork = `# Coming Soon
+  For now, please check out [Outfox Code](https://outfox-code.com/) - a personal development resource for aspiring programmers.`;
   const textContentBio = `
   # BIO
 
-  A developer with a background in International Trade. I'm currently an Application Developer for InHealthcare and in my spare time I study JavaScript, specifically the MERN stack. When I’m not coding, I'm a keen writer, screenwriter, musician, and artist.
+  A developer with a background in International Trade. I'm currently an Application Developer for InHealthcare and creator of [Outfox Code](https://outfox-code.com/) - a personal development resource for aspiring programmers.
+  
+  In my spare time I study JavaScript, specifically the MERN stack. When I’m not coding, I'm a keen writer, screenwriter, musician, and artist.
   
   Originally from the Black Country, West Midlands - now residing in Skipton, North Yorkshire with my wife, son, dog and two cats.
   
@@ -44,6 +48,7 @@ function Card(props) {
           linkTarget="_blank"
           children={textContentBio}
           remarkPlugins={[remarkGfm]}
+          className={style.reactMarkDown}
         />
       </div>
     );
@@ -53,13 +58,17 @@ function Card(props) {
         <Timeline></Timeline>
       </div>
     );
-  } else if (props.contentType === "blog") {
+  } else if (props.contentType === "work") {
     return (
-      <div className={"textCardContainer"} id="blog">
+      <div className={"textCardContainer"} id="work">
         {
           // eslint-disable-next-line
         }
-        <ReactMarkdown children={textContentBlog} remarkPlugins={[remarkGfm]} />
+        <ReactMarkdown
+          children={textContentWork}
+          remarkPlugins={[remarkGfm]}
+          className={style.reactMarkDown}
+        />
       </div>
     );
   } else {

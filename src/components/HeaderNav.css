@@ -4,35 +4,32 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: red solid 3px;
 }
 
 h1 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .navBlock {
   width: 50%;
   height: 100%;
   display: inline-flex;
-  border: orange solid 3px;
 }
 
 .navLogoContainer {
   width: 50%;
   height: 100%;
   margin: auto;
-  border: blue solid 3px;
 }
 
-.navIconContainer {
+.navbar .navIconContainer {
   width: 50%;
   height: 100%;
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: flex-end;
-  border: green solid 3px;
 }
 
 .navbar .mainNavContainer {
@@ -42,7 +39,6 @@ h1 {
   display: inline-flex;
   align-items: center; */
   justify-content: space-evenly;
-  border: purple solid 3px;
 }
 
 img.navLogo {

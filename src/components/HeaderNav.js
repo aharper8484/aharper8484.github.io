@@ -4,7 +4,6 @@ import linkedinIcon from "../assets/linkedin-icon.png";
 import resumeIcon from "../assets/resume-icon.png";
 import cvLink from "../assets/adamHarperCV.pdf";
 import React from "react";
-// import { useState } from "react";
 import "./MainBody.css";
 import "./CardToggle";
 import "./MainNav.css";
@@ -12,12 +11,6 @@ import "./CardToggle";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 function HeaderNav(props) {
-  // const [activeView, setActiveView] = useState("landing");
-
-  // function toggleMainView(a) {
-  //   setActiveView(a);
-  // }
-
   return (
     <div className="navbar">
       <div className="navLogoContainer">
@@ -30,16 +23,23 @@ function HeaderNav(props) {
           <div
             id="bio"
             className="mainNavLink"
-            // onClick={() => toggleMainView("bio")}
+            onClick={() => props.handleNav("bio")}
           >
             <ReactMarkdown># Bio</ReactMarkdown>
           </div>
           <div
-            id="timeline"
+            id="work"
             className="mainNavLink"
-            // onClick={() => toggleMainView("timeline")}
+            onClick={() => props.handleNav("timeline")}
           >
             <ReactMarkdown># Timeline</ReactMarkdown>
+          </div>
+          <div
+            id="timeline"
+            className="mainNavLink"
+            onClick={() => props.handleNav("work")}
+          >
+            <ReactMarkdown># Work</ReactMarkdown>
           </div>
         </div>
         <div className="navIconContainer">

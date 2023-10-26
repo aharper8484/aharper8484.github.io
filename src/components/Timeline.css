@@ -16,6 +16,10 @@
   color: rgb(233, 233, 233);
 }
 
+.descrTL a {
+  color: rgb(233, 233, 233);
+}
+
 #timeline body {
   --color: white;
   --bgColor: rgba(245, 245, 245);
@@ -49,7 +53,7 @@
 #timeline ul::before {
   content: "";
   grid-column: 1;
-  grid-row: 1 / span 20;
+  grid-row: 1 / span 100;
   background: black;
   border-radius: calc(var(--line-w) / 2);
 }
