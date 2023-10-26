@@ -65,6 +65,7 @@ function Card(props) {
           // eslint-disable-next-line
         }
         <ReactMarkdown
+          linkTarget="_blank"
           children={textContentWork}
           remarkPlugins={[remarkGfm]}
           className={style.reactMarkDown}

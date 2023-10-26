@@ -69,7 +69,7 @@ secondary - murkyGreen 006600
   transition-property: width;
 }
 
-#links.textCardContainer {
+/* #links.textCardContainer {
   display: block;
   display: block;
   border: 2px solid rgb(248, 248, 248);
@@ -79,16 +79,16 @@ secondary - murkyGreen 006600
   transition: width 1s, height 2s, transform 1s;
   transform-style: flat;
   transition-property: width;
-}
+} */
 
 #work.textCardContainer {
-  display: block;
   display: block;
   border: 2px solid rgb(248, 248, 248);
   font-size: smaller;
   text-align: left;
+  /* height: fit-content;*/
   word-wrap: break-word;
-  transition: width 1s, height 2s, transform 1s;
+  transition: width 2s, height 3s, transform 2s;
   transform-style: flat;
   transition-property: width;
 }
